@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JAC Class 11 Study Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>JAC Class 11 — Study Planner</h1>
+      <p class="muted">Subjects: History • Political Science • English • Sanskrit • Sociology</p>
+    </header>
+
+    <main>
+      <section class="controls card">
+        <h2>Setup & Schedule</h2>
+        <div class="row">
+          <label>Start date:
+            <input type="date" id="startDate" />
+          </label>
+          <label>Reminder time:
+            <input type="time" id="reminderTime" />
+          </label>
+          <label class="checkboxline">
+            <input type="checkbox" id="enableReminder" /> Enable daily reminder
+          </label>
+        </div>
+
+        <div class="row">
+          <button id="generateBtn" class="btn">Generate Schedule</button>
+          <button id="saveChaptersBtn" class="btn ghost">Save Chapters</button>
+          <button id="openTanuBtn" class="btn link">Open TanuClasses</button>
+        </div>
+
+        <p class="note">
+          Tip: Edit chapter lists below if you want custom chapters. Then press <strong>Save Chapters</strong> and <strong>Generate Schedule</strong>.
+        </p>
+      </section>
+
+      <section class="subjects card">
+        <h2>Chapters (edit as needed)</h2>
+        <div id="subjectsContainer" class="subjects-grid"></div>
+      </section>
+
+      <section class="today card">
+        <h2>Today's Task <span id="todayDate" class="muted small"></span></h2>
+        <div id="todayBox" class="today-box">No schedule yet. Generate schedule to see today's chapter.</div>
+        <div class="row">
+          <button id="markDoneBtn" class="btn success">Mark Complete</button>
+          <button id="skipBtn" class="btn warn">Skip / Next</button>
+        </div>
+      </section>
+
+      <section class="schedule card">
+        <h2>Full Schedule</h2>
+        <div id="scheduleList" class="schedule-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Made for JAC Class 11 — Open TanuClasses to study directly. Data stored locally in your browser.</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
